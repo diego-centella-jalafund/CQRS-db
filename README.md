@@ -1,4 +1,4 @@
-## CQRS con SQL y SQL - Proyecto con Docker
+## CQRS con SQL  
 
 ## Introducción a CQRS 
 
