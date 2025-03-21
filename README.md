@@ -2,7 +2,7 @@
 
 ## Introducción a CQRS 
 
-Command Query Responsibility Segregation (CQRS) es un patrón arquitectónico que separa las operaciones de lectura (queries) de las operaciones de escritura (commands) en un sistema. Esto permite optimizar cada operación de manera independiente, mejorando la escalabilidad y el rendimiento.
+Command Query Responsibility Segregation (CQRS) es un patrón arquitectónico que separa las operaciones de lectura de las operaciones de escritura en un sistema. Esto permite optimizar cada operación de manera independiente, mejorando la escalabilidad y el rendimiento.
 
 ##  Ejemplo de CQRS
 
@@ -47,7 +47,7 @@ Pasos para ejecutar el proyecto
 
 7. Conectarse a la base de datos de lectura y sincronizar con la bases de datos de escritura
 #### bash 
-- Intentar sincronizar los datos: docker exec -it write_db pg_dump -U user write_db | docker exec -i read_db psql -U user -d read_db
+- Intentar sincronizar los datos: docker exec -it write_db pg_dump -U user --data-only write_db | docker exec -i read_db psql -U user -d read_db
 
 - Conectarse a la db de lectura: psql -h localhost -p 5441 -U user -d read_db
 - password
@@ -77,7 +77,6 @@ Pasos para ejecutar el proyecto
 12. Ejecuta los comandos para leer en la base de datos de read
 #### sql
 - SELECT * FROM get_orders();
-
 
 Sincronización entre bases de datos, para mantener read_db actualizada
 
