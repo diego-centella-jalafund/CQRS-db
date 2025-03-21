@@ -14,11 +14,13 @@ read_db: Base de datos para operaciones de lectura (SELECT). Esta base de datos 
 
 # Requisitos previos
 
-## Asegúrate de tener instalado:
+## Tener instalado:
 
 #### Docker
 
 #### Docker Compose
+
+#### PostreSQL
 
 Para verificar la instalación, ejecuta:
 #### bash
